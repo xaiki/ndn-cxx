@@ -1,0 +1,5 @@
+libndn (0.4.1~git20161101-1) unstable; urgency=medium
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Niv Sardi <xaiki@endlessm.com>  Thu, 03 Nov 2016 10:31:01 -0300

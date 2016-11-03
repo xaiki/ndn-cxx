@@ -1,0 +1,39 @@
+Source: libndn
+Priority: optional
+Maintainer: Niv Sardi <xaiki@endlessm.com>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.8
+Section: libs
+Homepage: https://named-data.net
+Vcs-Git: https://github.com/named-data/ndn-cxx
+Vcs-Browser: https://github.com/named-data/ndn-cxx/tree/master
+
+Package: libndn-dev
+Section: libdevel
+Architecture: any
+Depends: libndn1 (= ${binary:Version}), ${misc:Depends}
+Description: C++ library implementing Named Data Networking (NDN) primitives
+ The Named Data Networking (NDN) project aims to develop a new Internet
+ architecture that can capitalize on strengths — and address weaknesses — of
+ the Internet’s current host-based, point-to-point communication
+ architecture in order to naturally accommodate emerging patterns of
+ communication. By naming data instead of their locations, NDN transforms
+ data into a first-class entity. The current Internet secures the data
+ container. NDN secures the contents, a design choice that decouples trust
+ in data from trust in hosts, enabling several radically scalable
+ communication mechanisms such as automatic caching to optimize bandwidth.
+
+Package: libndn1
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Developement files for C++ library implementing Named Data Networking (NDN) primitives
+ The Named Data Networking (NDN) project aims to develop a new Internet
+ architecture that can capitalize on strengths — and address weaknesses — of
+ the Internet’s current host-based, point-to-point communication
+ architecture in order to naturally accommodate emerging patterns of
+ communication. By naming data instead of their locations, NDN transforms
+ data into a first-class entity. The current Internet secures the data
+ container. NDN secures the contents, a design choice that decouples trust
+ in data from trust in hosts, enabling several radically scalable
+ communication mechanisms such as automatic caching to optimize bandwidth.
+
