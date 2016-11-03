@@ -1,17 +1,17 @@
-Source: libndn
+Source: libndn-cxx
 Priority: optional
 Maintainer: Niv Sardi <xaiki@endlessm.com>
-Build-Depends: debhelper (>= 9)
+Build-Depends: debhelper (>= 9), dh-waf, libcrypto++-dev, libsqlite3-dev, libboost1.61-dev
 Standards-Version: 3.9.8
 Section: libs
 Homepage: https://named-data.net
 Vcs-Git: https://github.com/named-data/ndn-cxx
 Vcs-Browser: https://github.com/named-data/ndn-cxx/tree/master
 
-Package: libndn-dev
+Package: libndn-cxx-dev
 Section: libdevel
 Architecture: any
-Depends: libndn1 (= ${binary:Version}), ${misc:Depends}
+Depends: libndn-cxx1 (= ${binary:Version}), ${misc:Depends}
 Description: C++ library implementing Named Data Networking (NDN) primitives
  The Named Data Networking (NDN) project aims to develop a new Internet
  architecture that can capitalize on strengths — and address weaknesses — of
@@ -23,7 +23,7 @@ Description: C++ library implementing Named Data Networking (NDN) primitives
  in data from trust in hosts, enabling several radically scalable
  communication mechanisms such as automatic caching to optimize bandwidth.
 
-Package: libndn1
+Package: libndn-cxx1
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Developement files for C++ library implementing Named Data Networking (NDN) primitives

@@ -8,4 +8,4 @@ version=4
 
 # Direct Git
 opts="mode=git" https://github.com/named-data/ndn-cxx.git \
-   refs/tags/ndn-cxx-([\d\.]+) debian uupdate
+   refs/tags/ndn-cxx-([\d\.]+) debian debian/repack-waf
