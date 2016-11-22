@@ -1,5 +1,11 @@
+libndn-cxx (0.5.0~git20161122-2) unstable; urgency=medium
+
+  * New Upstream release
+
+ -- Niv Sardi <xaiki@debian.org>  Tue, 22 Nov 2016 16:51:42 -0300
+
 libndn-cxx (0.4.1~git20161101-1) unstable; urgency=medium
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * Initial release (Closes: #nnnn)
 
  -- Niv Sardi <xaiki@endlessm.com>  Thu, 03 Nov 2016 10:31:01 -0300
