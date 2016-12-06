@@ -1,7 +1,7 @@
 Source: libndn-cxx
 Priority: optional
 Maintainer: Niv Sardi <xaiki@endlessm.com>
-Build-Depends: debhelper (>= 9), dh-waf, libcrypto++-dev, libsqlite3-dev, libboost1.61-dev
+Build-Depends: debhelper (>= 9), dh-waf, g++, libboost-dev, libboost-regex-dev, libboost-log-dev, libboost-chrono-dev, libboost-program-options-dev, libboost-random-dev, libssl-dev , libsqlite3-dev, libcrypto++-dev, libboost-iostreams-dev
 Standards-Version: 3.9.8
 Section: libs
 Homepage: https://named-data.net
