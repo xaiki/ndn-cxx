@@ -1,7 +1,19 @@
 Source: libndn-cxx
 Priority: optional
 Maintainer: Niv Sardi <xaiki@endlessm.com>
-Build-Depends: debhelper (>= 9), dh-waf, g++, libboost-dev, libboost-regex-dev, libboost-log-dev, libboost-chrono-dev, libboost-program-options-dev, libboost-random-dev, libssl-dev , libsqlite3-dev, libcrypto++-dev, libboost-iostreams-dev
+Build-Depends: debhelper (>= 9),
+               dh-waf,
+               g++,
+               libboost-chrono-dev,
+               libboost-dev,
+               libboost-iostreams-dev,
+               libboost-log-dev,
+               libboost-program-options-dev,
+               libboost-random-dev,
+               libboost-regex-dev,
+               libcrypto++-dev,
+               libsqlite3-dev,
+               libssl-dev
 Standards-Version: 3.9.8
 Section: libs
 Homepage: https://named-data.net
@@ -25,7 +37,7 @@ Description: C++ library implementing Named Data Networking (NDN) primitives
 
 Package: libndn-cxx1
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: Developement files for C++ library implementing Named Data Networking (NDN) primitives
  The Named Data Networking (NDN) project aims to develop a new Internet
  architecture that can capitalize on strengths — and address weaknesses — of
