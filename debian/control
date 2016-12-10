@@ -3,7 +3,6 @@ Priority: optional
 Maintainer: Niv Sardi <xaiki@endlessm.com>
 Build-Depends: debhelper (>= 9),
                dh-waf,
-               g++,
                libboost-chrono-dev,
                libboost-dev,
                libboost-iostreams-dev,
@@ -20,10 +19,9 @@ Homepage: https://named-data.net
 Vcs-Git: https://github.com/named-data/ndn-cxx
 Vcs-Browser: https://github.com/named-data/ndn-cxx/tree/master
 
-Package: libndn-cxx-dev
-Section: libdevel
+Package: libndn-cxx0
 Architecture: any
-Depends: libndn-cxx1 (= ${binary:Version}), ${misc:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: C++ library implementing Named Data Networking (NDN) primitives
  The Named Data Networking (NDN) project aims to develop a new Internet
  architecture that can capitalize on strengths — and address weaknesses — of
@@ -35,10 +33,11 @@ Description: C++ library implementing Named Data Networking (NDN) primitives
  in data from trust in hosts, enabling several radically scalable
  communication mechanisms such as automatic caching to optimize bandwidth.
 
-Package: libndn-cxx1
+Package: libndn-cxx-dev
+Section: libdevel
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
-Description: Developement files for C++ library implementing Named Data Networking (NDN) primitives
+Depends: libndn-cxx0 (= ${binary:Version}), ${misc:Depends}
+Description: Dev files for C++ library implementing Named Data Networking (NDN) primitives
  The Named Data Networking (NDN) project aims to develop a new Internet
  architecture that can capitalize on strengths — and address weaknesses — of
  the Internet’s current host-based, point-to-point communication
@@ -48,4 +47,38 @@ Description: Developement files for C++ library implementing Named Data Networki
  container. NDN secures the contents, a design choice that decouples trust
  in data from trust in hosts, enabling several radically scalable
  communication mechanisms such as automatic caching to optimize bandwidth.
+ .
+ This package contains the development files
 
+Package: ndn-tools
+Section: utils
+Architecture: any
+Depends: libndn-cxx0 (= ${binary:Version}), ${misc:Depends},  ${shlibs:Depends}
+Description: basic tools for Named Data Networking (NDN) operations
+ The Named Data Networking (NDN) project aims to develop a new Internet
+ architecture that can capitalize on strengths — and address weaknesses — of
+ the Internet’s current host-based, point-to-point communication
+ architecture in order to naturally accommodate emerging patterns of
+ communication. By naming data instead of their locations, NDN transforms
+ data into a first-class entity. The current Internet secures the data
+ container. NDN secures the contents, a design choice that decouples trust
+ in data from trust in hosts, enabling several radically scalable
+ communication mechanisms such as automatic caching to optimize bandwidth.
+ .
+ This package contains the following tools:
+  - ndn-client.conf: System configuration of the NDN platform
+  - ndnsec-cert-dump: Dump certificates from the Public Info Base
+  - ndnsec-cert-gen: Issue an identity certificate
+  - ndnsec-cert-install: Install a certificate into the Public Information Base
+  - ndnsec-cert-revoke: Generate certificate revocation data
+  - ndnsec-delete: Delete security data from the Public Information Base
+    and Trusted Platform Module
+  - ndnsec-dsk-gen: Generate a pair of Data-Signing-Key (DSK)
+  - ndnsec-get-default: Display the default settings of a particular entity
+  - ndnsec-import: Import an identity`s security data
+  - ndnsec-key-gen: Generate a pair of keys
+  - ndnsec-list: Display entities stored in the Public Information Base
+  - ndnsec: Command-line toolkit for NDN security
+  - ndnsec-set-default: Change default security settings
+  - ndnsec-sign-req: Generate signing requests for a particular key
+  - ndnsec-unlock-tpm: Unlock the Trusted Platform Module
