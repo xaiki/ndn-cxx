@@ -12,7 +12,9 @@ Build-Depends: debhelper (>= 9),
                libboost-regex-dev,
                libcrypto++-dev,
                libsqlite3-dev,
-               libssl-dev
+               libssl-dev,
+               python-sphinx,
+               python-sphinxcontrib.doxylink
 Standards-Version: 3.9.8
 Section: libs
 Homepage: https://named-data.net
@@ -53,7 +55,7 @@ Description: Dev files for C++ library implementing Named Data Networking (NDN) 
 Package: ndn-tools
 Section: utils
 Architecture: any
-Depends: libndn-cxx0 (= ${binary:Version}), ${misc:Depends},  ${shlibs:Depends}
+Depends: libndn-cxx0 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Description: basic tools for Named Data Networking (NDN) operations
  The Named Data Networking (NDN) project aims to develop a new Internet
  architecture that can capitalize on strengths — and address weaknesses — of
